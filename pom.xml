@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>my.drools.templates</groupId>
+    <artifactId>multiple-templates</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <version.jboss.maven.plugin>7.4.Final</version.jboss.maven.plugin>
+        <version.war.plugin>2.1.1</version.war.plugin>
+        <drools.version>6.3.0.Final</drools.version>
+        <jboss.logging.version>3.0.0.CR1</jboss.logging.version>
+    </properties>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>${version.war.plugin}</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.jboss.as.plugins</groupId>
+                <artifactId>jboss-as-maven-plugin</artifactId>
+                <version>${version.jboss.maven.plugin}</version>
+            </plugin>
+
+        </plugins>
+    </build>
+
+    <modules>
+        <module>facts</module>
+        <module>ruleModuleOne</module>
+        <module>ruleModuleTwo</module>
+        <module>rules</module>
+    </modules>
+
+</project>

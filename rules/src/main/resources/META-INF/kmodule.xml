@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule">
+    <kbase name="multipleTemplates-ruleModule_1_kbase" includes="ruleModule_1_kbase" packages="*">
+        <ksession name="ruleModule-1" type="stateless"/>
+    </kbase>
+    <kbase name="multipleTemplates-ruleModule_2_kbase" includes="ruleModule_2_kbase" packages="*">
+        <ksession name="ruleModule-2" type="stateless"/>
+    </kbase>
+</kmodule>

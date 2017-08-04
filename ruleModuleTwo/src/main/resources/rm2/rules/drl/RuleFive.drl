@@ -1,0 +1,17 @@
+package rm2.rules;
+
+import my.drools.templates.facts.FactOne;
+import my.drools.templates.facts.RuleResponse;
+
+global RuleResponse response;
+
+dialect "mvel"
+
+rule "Rule Five :: HHH"
+    when
+        FactOne($value:parameterName, parameterName!=null)
+        Boolean(booleanValue==true) from $value.contains("HHH")
+    then
+        response.setResult(true);
+        System.out.println("Invalid @{parameter}");
+end

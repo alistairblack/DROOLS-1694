@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule">
+    <kbase name="ruleModule_2_kbase" default="false" packages="rm2.rules.drl">
+        <ksession name="ruleModule-2" type="stateless"/>
+    </kbase>
+</kmodule>
